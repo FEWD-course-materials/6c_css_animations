@@ -1,0 +1,38 @@
+p {
+    transition-duration: 3s;
+    
+    transition-timing-function: ease;
+}
+
+p:hover {
+    margin-right: 200px;
+    color: crimson;
+    font-size: 30px;
+}
+
+.ball {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background-color: navy;
+}
+
+.ball1 {
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.ball1:hover {
+    transform: skewY(20deg);
+}
+
+.ball2 {
+    animation: shrinkhorizontally 3s ease-in 1s infinite reverse both running;
+}
+
+@keyframes shrinkhorizontally {
+    from { transform: scaleX(0); }
+    75% { transform: scaleX(0.3)}
+    to   { transform: scaleX(1); }
+  }
